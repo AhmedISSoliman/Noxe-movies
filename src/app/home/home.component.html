@@ -1,0 +1,65 @@
+<!-- <app-homeheader [data]="movies"></app-homeheader> -->
+<app-homeheader></app-homeheader>
+
+<div class="container">
+  <div class="row py-2">
+    <div class="col-md-4 d-flex align-items-center">
+      <div>
+        <div class="brder w-25 mb-4"></div>
+        <h2>Trending Moives<br> To Watch Right Now</h2>
+        <p class="para my-2 ">Most Watching By Days </p>
+        <div class="brder w-25 mt-4"></div>
+      </div>
+    </div>
+
+    <div *ngFor="let movie of movies" class="col-md-2 ">
+      <div class="movie my-2 position-relative">
+        <a [routerLink]='["/moviesdetails",movie.id]'>
+          <img class="w-100" [src]="imgSrc+movie.poster_path" alt="">
+          <h3 class="h6 my-3">{{movie.title}}</h3>
+          <div class="vote">
+            {{movie.vote_average}}
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row py-2">
+    <div class="col-md-4 d-flex align-items-center">
+      <div>
+        <div class="brder w-25 mb-4"></div>
+        <h2>Trending Tv<br> To Watch Right Now</h2>
+        <p class="para my-2 ">Most Watching Tv By Days </p>
+        <div class="brder w-25 mt-4"></div>
+      </div>
+    </div>
+    <div *ngFor="let tv of tvs" class="col-md-2 ">
+      <div class="movie my-2 position-relative">
+        <img class="w-100" [src]="imgSrc+tv.poster_path" alt="">
+        <h3 class="h6 my-3">{{tv.name}}</h3>
+        <div class="vote">
+          {{tv.vote_average}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row py-2">
+    <div class="col-md-4 d-flex">
+      <div>
+        <div class="brder w-25 mb-4"></div>
+        <h2>Trending People<br> To Watch Right Now</h2>
+        <p class="para my-2 ">Most Watching People By Days </p>
+        <div class="brder w-25 mt-4"></div>
+      </div>
+    </div>
+    <div *ngFor="let person of people" class="col-md-2 ">
+      <div class="movie my-2 position-relative">
+        <img class="w-100" [src]="imgSrc+person.profile_path" alt="">
+        <h3 class="h6 my-2">{{person.name}}</h3>
+
+      </div>
+    </div>
+  </div>
+</div>

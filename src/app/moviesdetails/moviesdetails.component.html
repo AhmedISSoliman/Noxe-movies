@@ -1,0 +1,14 @@
+<h1>{{id}}</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img class="w-100 my-4 py-5" [src]="imgSrc+movieDetails?.poster_path" alt="">
+        </div>
+        <div class="col-md-8 my-4 py-5">
+            <!-- <h2>{{movieDetails?.id}}</h2> -->
+            <h3 class="h1">-{{movieDetails?.title}}-</h3>
+            <p>{{movieDetails?.overview}}</p>
+            <p class="h4"><span> Vote Average :</span> {{movieDetails?.vote_average}}</p>
+        </div>
+    </div>
+</div>

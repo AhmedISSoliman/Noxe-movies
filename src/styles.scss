@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+// @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+// @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+
+$bgColor:#131722;
+$lightBgColor:#24baef;
+$bgTransparent:rgb(36,186,239,.6);
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$borderHeight:1px;
+$secondFontColor:#949cb0;
+
+body {
+    background-color: $bgColor;
+    color:$fontColor ;
+    font-family: 'Montserrat Alternates',
+    sans-serif;
+
+}
+a{
+    text-decoration: none;
+    color:$fontColor;
+    font-size: 18px;
+
+}
+a:hover{
+    text-decoration: none;
+    color:$fontColor;
+    font-size: 18px;
+
+}
+
+.brder {
+    background-color: $borderColor;
+    height: 1px;
+
+}
+.para{
+    color:$secondFontColor;
+    font-weight: 700 ;
+}
+.vote{
+    background-color:$lightBgColor;
+    padding: 5px;
+    font-weight:700 ;
+    position:absolute;
+    top: 0;
+    right: 10px;
+}
